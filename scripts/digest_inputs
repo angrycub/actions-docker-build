@@ -3,9 +3,9 @@
 # disable unused variable checking, as this script's purpose
 # is just to populate env vars for later scripts.
 # shellcheck disable=SC2034
-echo "Dumping Environment:"
+echo "*** Environment Before"
 env
-echo ""
+echo "*** Done"
 
 set -Eeuo pipefail
 
@@ -135,3 +135,6 @@ if [ "$ARCH" = "arm" ]; then
 fi
 
 add_var PLATFORM
+echo "*** Environment After"
+env
+echo "*** Done"
