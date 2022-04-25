@@ -4,7 +4,7 @@
 # is just to populate env vars for later scripts.
 # shellcheck disable=SC2034
 echo "*** Environment Before"
-env
+env | sort
 echo "*** Done"
 
 set -Eeuo pipefail
@@ -136,5 +136,5 @@ fi
 
 add_var PLATFORM
 echo "*** Environment After"
-env
+env | sort
 echo "*** Done"
